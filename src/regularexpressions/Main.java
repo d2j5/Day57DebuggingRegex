@@ -4,8 +4,12 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) {
         // Email Validation
+        /*validate an email address that meets the following criteria:
+        Both the username and the domain can contain uppercase letters, lowercase letters, digits, and certain permitted special characters.
+        The username and the domain must have at least one character.
+        The email address must have a valid basic format, with a username followed by the at symbol and then the domain.*/
         String email = "example@example.com";
-        String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+        String emailRegex = "[A-Za-z0-9!#$%&'*+/=?^_{|}~.-]+@[A-Za-z0-9!#$%&'*+/=?^_{|}~.-]+\\.[A-Za-z]{2,}";
         validateInput(email, emailRegex, "Email");
 
         // Phone Number Validation
@@ -25,12 +29,12 @@ public class Main {
 
         // Credit Card Number Validation
         String creditCard = "1234-5678-9012-3456";
-        String creditCardRegex = "^(\\d{4}-){3}\\d{4}$";
+        String creditCardRegex = "^\\d{4}-\\d{4}-\\d{4}-\\d{4}$";
         validateInput(creditCard, creditCardRegex, "Credit Card");
 
         // US Zip Code Validation
         String zipCode = "12345-6789";
-        String zipCodeRegex = "^\\d{5}(-\\d{4})?$";
+        String zipCodeRegex = "^\\d{5}-\\d{4}$";
         validateInput(zipCode, zipCodeRegex, "ZIP Code");
 
         // Java Identifier Validation
