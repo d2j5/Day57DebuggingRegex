@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         // Email Validation
         String email = "example@example.com";
-        String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+        String emailRegex = "^[A-Za-z0-9!#$%&'*+/=?^_{|}~.-]+@[A-Za-z0-9!#$%&'*+/=?^_{|}~.-]+$";
         validateInput(email, emailRegex, "Email");
 
         // Phone Number Validation
